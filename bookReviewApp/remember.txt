@@ -1,0 +1,23 @@
+Bu uç noktalarla kitap listeleme, detay alma, oturum açma, kaydolma, inceleme-ekleme, düzenleme ve silme işlemlerini gerçekleştirebiliriz.
+Tüm kitapları listele -> http://localhost:5000/ method: get
+ISBN'ye göre kitap detayları al -> http://localhost:5000/isbn/978-1-86197-876-9 metod: get 
+Yazara göre kitapları listele -> http://localhost:5000/author/J.D. Salinger metod: get 
+Başlığa göre kitapları listele -> http://localhost:5000/title/The Catcher in the Rye metod -> get 
+Kitap incelemelerini al -> http://localhost:5000/review/978-1-86197-876-9 metod: get
+Kayıtlı kullanıcı olarak giriş yap -> http://localhost:5000/customer/login metod: post body json {"username":"eray","password":"1234"} raw json
+Kitap incelemesi ekle veya düzenle -> http://localhost:5000/customer/auth/review/978-1-86197-876-9 metod: post body json {"review":"felaket books"}
+Kitap incelemesi sil -> http://localhost:5000/customer/auth/review/978-1-86197-876-9 metod: delete 
+Kullanıcı kayıt -> http://localhost:5000/customer/register metod: post 
+
+
+With these endpoints we can list books, get details, log in, register, review-add, edit and delete.
+
+List all books -> http://localhost:5000/ method: get
+Get book details by ISBN -> http://localhost:5000/isbn/978-1-86197-876-9 method: get
+List books by author -> http://localhost:5000/author/J.D. Salinger method: get
+List books by title -> http://localhost:5000/title/The Catcher in the Rye method -> get
+Get book reviews -> http://localhost:5000/review/978-1-86197-876-9 method: get
+Log in as registered user -> http://localhost:5000/customer/login method: post body json {"username":"eray","password":"1234"} raw json
+Add or edit book reviews -> http://localhost:5000/customer/auth/review/978-1-86197-876-9 method: post body json {"review":"felaket books"}
+Delete book reviews -> http://localhost:5000/customer/auth/review/978-1-86197-876-9 method: delete
+User registration -> http://localhost:5000/customer/register method: post
